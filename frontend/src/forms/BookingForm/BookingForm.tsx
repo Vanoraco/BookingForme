@@ -17,8 +17,7 @@ type Props = {
 };
 
 export type BookingFormData = {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   adultCount: number;
   childCount: number;
@@ -52,8 +51,7 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
 
   const { handleSubmit, register } = useForm<BookingFormData>({
     defaultValues: {
-      firstName: currentUser.firstName,
-      lastName: currentUser.lastName,
+      name: currentUser.name,
       email: currentUser.email,
       adultCount: search.adultCount,
       childCount: search.childCount,
@@ -89,25 +87,16 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
       <span className="text-3xl font-bold">Confirm Your Details</span>
       <div className="grid grid-cols-2 gap-6">
         <label className="text-gray-700 text-sm font-bold flex-1">
-          First Name
+            Name
           <input
             className="mt-1 border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 font-normal"
             type="text"
             readOnly
             disabled
-            {...register("firstName")}
+            {...register("name")}
           />
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
-          Last Name
-          <input
-            className="mt-1 border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 font-normal"
-            type="text"
-            readOnly
-            disabled
-            {...register("lastName")}
-          />
-        </label>
+        
         <label className="text-gray-700 text-sm font-bold flex-1">
           Email
           <input

@@ -11,7 +11,7 @@ const Hero = () => {
   const [carRental, setCarRental] = useState("");
 
   return (
-    <div className="relative  pb-16">
+    <div className="relative  pb-16 overflow-x-hidden">
       {/* Background Image */}
       <img 
         className="w-full h-auto object-cover" 
