@@ -230,12 +230,12 @@ const Home = () => {
   </p>
   <div className="w-[67px] left-[17px] bg-[#d50630] absolute h-9 top-[81px] rounded z-20">
     <div className="absolute w-[43px] h-5 top-[7px] left-3 [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-white text-sm tracking-[0] leading-5 whitespace-nowrap">
-      Sign in
+      <a href="sign-in">Sign in</a>
     </div>
   </div>
   <div className="w-[68px] left-[92px] absolute h-9 top-[81px] rounded z-20">
     <div className="absolute w-[52px] h-5 top-[7px] left-2 [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#1e1e1e] text-sm tracking-[0] leading-5 whitespace-nowrap">
-      Register
+      <a href="register">Register</a>
     </div>
   </div>
   <div

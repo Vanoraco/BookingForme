@@ -20,21 +20,37 @@ export const fetchCurrentUser = async (): Promise<UserType> => {
 };
 
 export const register = async (formData: RegisterFormData) => {
-  const response = await fetch(`${API_BASE_URL}/api/users/register`, {
-    method: "POST",
-    credentials: "include",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  });
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/users/register`, {
+      method: "POST",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-  const responseBody = await response.json();
+    console.log("Submitted Data:", formData)
+    const responseBody = await response.json();
+    console.log("Responde", responseBody)
+    if (!response.ok) {
+      // Handle validation errors
+      if (Array.isArray(responseBody.message)) {
+        const errorMessages = responseBody.message.map((error: any) => error.msg).join(", ");
+        throw new Error(errorMessages);
+      }
+      throw new Error(responseBody.message || "An unknown error occurred");
+    }
 
-  if (!response.ok) {
-    throw new Error(responseBody.message);
+    return responseBody; // Successful response
+  } catch (error) {
+    console.error("Register error:", error);
+    throw error; // Rethrow to propagate the error to the caller
   }
 };
+
+
+
 
 export const signIn = async (formData: SignInFormData) => {
   const response = await fetch(`${API_BASE_URL}/api/auth/login`, {

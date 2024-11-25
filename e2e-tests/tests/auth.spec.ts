@@ -33,8 +33,8 @@ test("should allow user to register", async ({ page }) => {
     page.getByRole("heading", { name: "Create an Account" })
   ).toBeVisible();
 
-  await page.locator("[name=firstName]").fill("test_firstName");
-  await page.locator("[name=lastName]").fill("test_lastName");
+  
+  await page.locator("[name=name]").fill("test_name");
   await page.locator("[name=email]").fill(testEmail);
   await page.locator("[name=password]").fill("password123");
   await page.locator("[name=confirmPassword]").fill("password123");

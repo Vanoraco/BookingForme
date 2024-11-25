@@ -9,7 +9,7 @@ import icon from "../assets/images/icon.svg";
 
 const Header = () => {
   return (
-    <div className="bg-[#D50630] py-1 ">
+    <div className="bg-[#D50630] py-1 overflow-x-hidden ">
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Logo and Navigation */}
@@ -35,7 +35,7 @@ const Header = () => {
           <img src={buttonGlobalheaderButtondarkMduxn2} alt="Help Icon" className="h-5 w-5" />
           <img src={buttonGlobalheaderButtondarkMduxn3} alt="Settings Icon" className="h-5 w-5" />
           <img src={buttonGlobalheaderButtondarkMduxn} alt="Notification Icon" className="h-5 w-5" />
-          <button className="text-white px-2 py-3 rounded-lg">Log in</button>
+          <button className="text-white px-2 py-3 rounded-lg"><a href="sign-in">Log in</a></button>
           <img src={icon3} alt="User Icon" className="h-5 w-5" />
         </div>
       </div>
