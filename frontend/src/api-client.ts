@@ -33,6 +33,9 @@ export const register = async (formData: RegisterFormData) => {
     console.log("Submitted Data:", formData)
     const responseBody = await response.json();
     console.log("Responde", responseBody)
+    console.log(responseBody.firstName)
+    
+
     if (!response.ok) {
       // Handle validation errors
       if (Array.isArray(responseBody.message)) {
@@ -41,7 +44,7 @@ export const register = async (formData: RegisterFormData) => {
       }
       throw new Error(responseBody.message || "An unknown error occurred");
     }
-
+    localStorage.setItem("userName", formData.email);
     return responseBody; // Successful response
   } catch (error) {
     console.error("Register error:", error);
@@ -61,11 +64,17 @@ export const signIn = async (formData: SignInFormData) => {
     },
     body: JSON.stringify(formData),
   });
-
+console.log(formData)
   const body = await response.json();
+  console.log(body)
+  console.log(body.firstName)
+
+  
+
   if (!response.ok) {
     throw new Error(body.message);
   }
+  localStorage.setItem("userName", formData.email);
   return body;
 };
 
