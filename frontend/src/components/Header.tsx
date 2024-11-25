@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import BOOKFORME02031 from "../assets/images/BOOKFORME-02-03-1.png";
 import buttonGlobalheaderButtondarkMduxn2 from "../assets/images/button-globalheader-buttondark-mduxn-2.svg";
 import buttonGlobalheaderButtondarkMduxn3 from "../assets/images/button-globalheader-buttondark-mduxn-3.svg";
