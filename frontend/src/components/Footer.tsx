@@ -1,6 +1,80 @@
 const Footer = () => {
   return (
-    <div className="relative w-full h-[336px] bg-[#d50630] overflowx-x-hidden overflow-y-hidden"> <p className="absolute h-5 top-[291px] left-[618px] [font-family:'Inter-Regular',Helvetica] font-normal text-[#eff3f8] text-[13px] tracking-[0] leading-5 whitespace-nowrap"> © Bookforme Ltd 2002 – 2024 </p> <div className="absolute w-[1224px] h-[251px] top-0 left-[101px]"> <div className="flex flex-col w-64 h-[195px] items-start gap-4 pt-2 pb-[2319.8px] px-0 absolute top-14 left-[968px]"> <div className="relative w-64 h-[23px] mb-[-2155.80px]"> <img className="absolute w-4 h-4 top-1 left-60" alt="Icon"  /> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Explore </div> </div> <div className="mb-[-2194.80px] relative w-64 h-[23px]"> <img className="absolute w-4 h-4 top-1 left-60" alt="Icon"  /> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Company </div> </div> <div className="mb-[-2233.80px] relative w-64 h-[23px]"> <img className="absolute w-4 h-4 top-1 left-60" alt="Icon"  /> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Partners </div> </div> <div className="mb-[-2272.80px] relative w-64 h-[23px]"> <img className="absolute w-4 h-4 top-1 left-60" alt="Icon"  /> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Trips </div> </div> <div className="mb-[-2311.80px] relative w-64 h-[23px]"> <img className="absolute w-4 h-4 top-1 left-60" alt="Icon"  /> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> International Sites </div> </div> </div> <div className="absolute w-64 h-[187px] top-16 left-[688px]"> <div className="absolute h-5 top-[72px] left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Company Details </div> <div className="absolute h-5 top-9 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Terms of service </div> <div className="absolute h-5 top-0 left-0 [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Privacy policy </div> </div> <div className="flex flex-col w-64 h-[187px] items-start gap-4 pl-0 pr-[152.17px] pt-0 pb-[2330.8px] absolute top-16 left-[408px]"> <div className="relative w-fit mb-[-2163.80px] [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Help </div> <div className="relative w-fit mb-[-2199.80px] [font-family:'Kantumruy_Pro-Medium',Helvetica] font-medium text-white text-[13.2px] tracking-[0] leading-5 whitespace-nowrap"> Log in </div> </div> <div className="absolute w-96 h-9 top-16 left-0"> <div className="w-72 h-9 bg-[#ffffff1a] rounded-[10px]"> <div className="relative w-[198px] h-4 top-2.5 left-4"> <div className="flex w-[33px] h-3.5 items-start gap-[0.06px] pl-0 pr-[257.89px] py-0 absolute top-px left-[164px]"> <div className="relative w-fit mb-[-2.00px] mr-[-232.89px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> $ </div> <div className="relative w-fit mb-[-2.00px] mr-[-256.95px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> USD </div> </div> <div className="left-[157px] absolute h-4 top-0 [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> · </div> <div className="absolute h-4 top-0 left-[87px] [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> English (US) </div> <div className="left-20 absolute h-4 top-0 [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> · </div> <div className="absolute h-4 top-0 left-0 [font-family:'Inter-Bold',Helvetica] font-bold text-white text-[11.1px] tracking-[0] leading-4 whitespace-nowrap"> United States </div> </div> </div> </div> </div> </div>
+    <footer className="bg-[#d50630] text-white py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Location & Language Selector */}
+          <div className="space-y-4">
+            <div className="bg-[#ffffff1a] rounded-[10px] p-2.5 inline-flex items-center space-x-2 text-sm">
+              <span className="whitespace-nowrap">United States</span>
+              <span>·</span>
+              <span className="whitespace-nowrap">English (US)</span>
+              <span>·</span>
+              <span className="whitespace-nowrap">$ USD</span>
+            </div>
+          </div>
+
+          {/* Help & Login */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-medium">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm hover:underline">Help</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Log in</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal Links */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-medium">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm hover:underline">Privacy policy</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Terms of service</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Company Details</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="space-y-4">
+            <h3 className="text-sm font-medium">Navigation</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-sm hover:underline">Explore</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Company</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Partners</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">Trips</a>
+              </li>
+              <li>
+                <a href="#" className="text-sm hover:underline">International Sites</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-white/10 text-center">
+          <p className="text-sm text-[#eff3f8]">
+            © Bookforme Ltd 2002 – 2024
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 };
 
