@@ -1,7 +1,6 @@
-import { useQuery } from "react-query";
-import * as apiClient from "../api-client";
-import LatestDestinationCard from "../components/LastestDestinationCard";
-import imageGlobalnavigationcardLogoimage from "../assets/images/imageGlobalnavigationcardLogoimage.svg";
+//import { useQuery } from "react-query";
+//import * as apiClient from "../api-client";
+
 import slotI from "../assets/images/slot-1.svg"
 
 import newYo from "../assets/images/977436.svg"
@@ -17,19 +16,19 @@ import ReactDatePicker from 'react-datepicker';
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { FaSearch, FaCalendarAlt } from 'react-icons/fa';
+import {  FaCalendarAlt } from 'react-icons/fa';
 import { LuFerrisWheel } from "react-icons/lu";
 import { useState } from "react";
 
 const Home = () => {
-  const { data: hotels } = useQuery("fetchQuery", () =>
+  /*const { data: hotels } = useQuery("fetchQuery", () =>
     apiClient.fetchHotels()
-  );
+  );*/
 
   const [startDate, setStartDate] = useState<Date | null>(null);
 
-  const topRowHotels = hotels?.slice(0, 2) || [];
-  const bottomRowHotels = hotels?.slice(2) || [];
+  //const topRowHotels = hotels?.slice(0, 2) || [];
+  //const bottomRowHotels = hotels?.slice(2) || [];
 
   return (
     <div>
