@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BOOKFORME02031 from "../assets/images/BOOKFORME-02-03-1.png";
 import buttonGlobalheaderButtondarkMduxn2 from "../assets/images/button-globalheader-buttondark-mduxn-2.svg";
 import buttonGlobalheaderButtondarkMduxn3 from "../assets/images/button-globalheader-buttondark-mduxn-3.svg";
@@ -8,10 +8,26 @@ import icon2 from "../assets/images/icon-2.svg";
 import icon from "../assets/images/icon.svg";
 
 const Header = () => {
+  const [userName, setUserName] = useState<string | null>(null);
+
+  // Simulate fetching user data after successful login/signup
+  useEffect(() => {
+    // Replace with your actual logic to check user authentication
+    const storedUser = localStorage.getItem("userName"); // Assuming you save userName in localStorage
+    if (storedUser) {
+      setUserName(storedUser);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Clear user data on logout
+    localStorage.removeItem("userName");
+    setUserName(null);
+  };
+
   return (
     <div className="bg-[#D50630] py-1 overflow-x-hidden ">
       <div className="container mx-auto flex justify-between items-center">
-        
         {/* Logo and Navigation */}
         <div className="flex flex-col items-start gap-4 -ml-28">
           {/* Logo */}
@@ -35,7 +51,24 @@ const Header = () => {
           <img src={buttonGlobalheaderButtondarkMduxn2} alt="Help Icon" className="h-5 w-5" />
           <img src={buttonGlobalheaderButtondarkMduxn3} alt="Settings Icon" className="h-5 w-5" />
           <img src={buttonGlobalheaderButtondarkMduxn} alt="Notification Icon" className="h-5 w-5" />
-          <button className="text-white px-2 py-3 rounded-lg"><a href="sign-in">Log in</a></button>
+
+          {/* Login/Logout or User Name Button */}
+          {userName ? (
+            <>
+              <span className="text-white px-2 py-3 rounded-lg">{userName}</span>
+              <button
+                className="text-white px-2 py-3 rounded-lg bg-red-500 hover:bg-red-600"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <button className="text-white px-2 py-3 rounded-lg">
+              <a href="sign-in">Log in</a>
+            </button>
+          )}
+
           <img src={icon3} alt="User Icon" className="h-5 w-5" />
         </div>
       </div>
